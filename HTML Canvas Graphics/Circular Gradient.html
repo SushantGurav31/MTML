@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border: 1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+    <script>
+        var c = document.getElementById("mycanvas");
+        var ctx = c.getcontext("2d");
+
+        // create gradient 
+        var grd = ctx.createradialgradient (75,50,5,90,60,100);
+        grd.addcolorstop (0,"red");
+        rgd.addcolorstop (1, "white");
+
+
+        // fill with gradient 
+        ctx.fillstyle=grd;
+        ctx.fillrect(10,10,150,80)
+    </script>
+</body>
+</html>
