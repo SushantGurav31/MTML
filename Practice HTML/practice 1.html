@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form example 1</title>
+</head>
+  <style>
+    body {
+      background-color: rgb(30, 114, 142);
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    form {
+      display: inline-block;
+      text-align: left;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    label {
+      display: inline-block;
+      width: 150px;
+      margin: 10px 0;
+    }
+    input, select {
+      padding: 5px;
+      margin: 5px 0;
+    }
+    .btn {
+      margin-top: 15px;
+      text-align: center;
+    }
+    .btn input{
+      background-color: orangered;
+      color: white;
+      border: none;
+      padding: 15px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+<body>
+    <h1>Application Form</h1>
+
+    <form>
+    <label> First name:</label>
+    <input type="text" id="name" class="name" >
+
+    <label>Last Name:</label>
+    <input type="text" id="name" class="name"> <br><br><br>
+
+    <label>Date of birth:</label>
+    <input type="date" id="date" class="date">
+
+    <label>Age:</label>
+    <input type="number" id="number" class="age"><br><br><br>
+
+       <label>Gender:</label>
+    <select name="gender">
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <label>Email Address:</label>
+    <input type="email" id="mail" class="mail"><br><br><br>
+
+    <label>Positions Available:</label>
+    <input type="radio" name="position" value="junior"> Junior Developer
+    <input type="radio" name="position" value="mid"> Mid-level Developer
+    <input type="radio" name="position" value="senior"> Senior Developer<br><br>
+
+    <label>Programing Languages:</label>
+    <input type="checkbox" value="java"> java
+    <input type="checkbox" value="Javascript">JavaScript
+    <input type="checkbox" value="Python">Python
+    <br><br>
+
+
+    <label>Password:</label>
+    <input type="password" id="number" class="password">
+    <label>Confirm password:</label>
+    <input type="password" name="password" id="Confirm"><br><br>
+
+    <div class="btn">
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </div>
+    </form>
+</body>
+</html>
