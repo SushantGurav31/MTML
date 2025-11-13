@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration Form</title>
+
+    <style>
+        /* ====== Page Style ====== */
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #ffffff;
+            width: 420px;
+            padding: 35px 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .form-container:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        /* ====== Input Fields ====== */
+        label {
+            display: block;
+            font-weight: 600;
+            margin-top: 12px;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+        }
+
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        /* ====== Button Style ====== */
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(90deg, #2563eb, #1e3a8a);
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #1d4ed8, #1e40af);
+            transform: translateY(-2px);
+        }
+
+        .note {
+            text-align: center;
+            font-size: 13px;
+            color: #555;
+            margin-top: 12px;
+        }
+
+        .note a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .note a:hover {
+            text-decoration: underline;
+        }
+
+        /* ====== Responsive ====== */
+        @media (max-width: 480px) {
+            .form-container {
+                width: 90%;
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Doctor Registration</h2>
+        <form action="/register" method="POST">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit number" pattern="[0-9]{10}" required>
+
+            <label for="specialization">Specialization</label>
+            <select id="specialization" name="specialization" required>
+                <option value="">-- Select Specialization --</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Orthopedics">Orthopedics</option>
+                <option value="Pediatrics">Pediatrics</option>
+                <option value="Dermatology">Dermatology</option>
+                <option value="General Medicine">General Medicine</option>
+            </select>
+
+            <label for="experience">Years of Experience</label>
+            <input type="number" id="experience" name="experience" min="0" placeholder="e.g. 5" required>
+
+            <label for="address">Clinic / Home Address</label>
+            <textarea id="address" name="address" placeholder="Enter full address" required></textarea>
+
+            <label for="license">Medical License Number</label>
+            <input type="text" id="license" name="license" placeholder="Enter license number" required>
+
+            <button type="submit">Register</button>
+
+            <p class="note">
+                Already registered? <a href="/login">Login here</a>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>
